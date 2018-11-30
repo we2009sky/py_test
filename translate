@@ -1,5 +1,7 @@
-url = 'http://fanyi.youdao.com/translate?smartresult=dict&smartresult=rule'
+import json
+from urllib import request, parse
 
+url = 'http://fanyi.youdao.com/translate?smartresult=dict&smartresult=rule'
 
 head= {}
 '''
