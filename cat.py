@@ -1,6 +1,5 @@
 import os
 import urllib.request
-# edit by branch, waitting for pull request and merge
 
 res = urllib.request.urlopen('http://placekitten.com/800/800')
 cat_img = res.read()
