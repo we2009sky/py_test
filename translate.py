@@ -1,3 +1,6 @@
+import json
+from urllib import request, parse
+
 url = 'http://fanyi.youdao.com/translate?smartresult=dict&smartresult=rule'
 
 
@@ -7,7 +10,7 @@ head['User-Agent'] =  'Mozilla/5.0 (Windows NT 10.0; Win64; x64)\
 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
 '''
 data = {}
-content = input('请输入翻译内容：')
+content = input('Input translate：')
 
 data['i'] = content
 data['from'] = 'AUTO'
@@ -35,6 +38,6 @@ res = request.urlopen(req)
 html = res.read().decode('utf-8')
 
 tar = json.loads(html) # html is dict
-print ('你输入的是：',tar['translateResult'][0][0]['src'])
-print ('翻译结果是：',tar['translateResult'][0][0]['tgt'])
+print ('Your input：',tar['translateResult'][0][0]['src'])
+print ('Answer is ：',tar['translateResult'][0][0]['tgt'])
 
