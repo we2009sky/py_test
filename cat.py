@@ -6,4 +6,4 @@ cat_img = res.read()
 
 with open('cat_800_800.jpg', 'wb') as f:
     f.write(cat_img)
-print(os.getcwd())  
+print('Download completed, stored in--->',os.getcwd())  
